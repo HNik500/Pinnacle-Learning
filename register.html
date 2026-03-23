@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo">PinnacleLearning</a>
@@ -18,19 +20,18 @@
     </nav>
 
     <main class="container">
-        <div class="grid-2-col" style="max-width: 1000px; margin: 0 auto;">
-            
-            <!-- Registration Form -->
+        <div class="grid-2-col container-custom">
+
             <div class="form-container">
                 <h2>Create an Account</h2>
                 <p>Join us today to start your learning journey.</p>
-                <form id="registerForm" onsubmit="return validateRegister(event)">
+                <form id="registerForm">
                     <div class="form-group">
                         <label for="regName">Full Name</label>
                         <input type="text" id="regName" class="form-control" placeholder="John Doe">
                         <span id="nameError" class="error-message">Please enter your full name.</span>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="regEmail">Email Address</label>
                         <input type="email" id="regEmail" class="form-control" placeholder="john@example.com">
@@ -39,26 +40,27 @@
 
                     <div class="form-group">
                         <label for="regPassword">Password</label>
-                        <input type="password" id="regPassword" class="form-control" placeholder="Create a strong password">
+                        <input type="password" id="regPassword" class="form-control"
+                            placeholder="Create a strong password">
                         <span id="passwordError" class="error-message">Password must be at least 6 characters.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="regConfirmPassword">Confirm Password</label>
-                        <input type="password" id="regConfirmPassword" class="form-control" placeholder="Repeat your password">
+                        <input type="password" id="regConfirmPassword" class="form-control"
+                            placeholder="Repeat your password">
                         <span id="confirmError" class="error-message">Passwords do not match.</span>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
-                    <div id="regSuccess" style="color: #10b981; margin-top: 1rem; display: none;">Registration successful!</div>
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                    <div id="regSuccess" class="success-message">Registration successful!</div>
                 </form>
             </div>
 
-            <!-- Login Form -->
             <div class="form-container">
                 <h2>Welcome Back</h2>
                 <p>Login to access your courses.</p>
-                <form id="loginForm" onsubmit="return validateLogin(event)">
+                <form id="loginForm">
                     <div class="form-group">
                         <label for="loginEmail">Email Address</label>
                         <input type="email" id="loginEmail" class="form-control" placeholder="you@example.com">
@@ -67,102 +69,22 @@
 
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password">
+                        <input type="password" id="loginPassword" class="form-control"
+                            placeholder="Enter your password">
                         <span id="loginPasswordError" class="error-message">Please enter your password.</span>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
-                    <div id="loginSuccess" style="color: #10b981; margin-top: 1rem; display: none;">Login successful! redirecting...</div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                    <div id="loginSuccess" class="success-message">Login successful! redirecting...</div>
                 </form>
             </div>
-            
+
         </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Pinnacle Learning. All rights reserved.</p>
     </footer>
-
-    <!-- Inline JavaScript Validation -->
-    <script>
-        function validateRegister(event) {
-            event.preventDefault();
-            let isValid = true;
-            
-            const name = document.getElementById('regName').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const pass = document.getElementById('regPassword').value;
-            const confirmPass = document.getElementById('regConfirmPassword').value;
-            
-            // Name validation
-            if(name === "") {
-                document.getElementById('nameError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('nameError').style.display = 'none';
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(!emailRegex.test(email)) {
-                document.getElementById('emailError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('emailError').style.display = 'none';
-            }
-
-            // Password length validation
-            if(pass.length < 6) {
-                document.getElementById('passwordError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('passwordError').style.display = 'none';
-            }
-
-            // Password match validation
-            if(pass !== confirmPass || confirmPass === "") {
-                document.getElementById('confirmError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('confirmError').style.display = 'none';
-            }
-
-            if(isValid) {
-                document.getElementById('regSuccess').style.display = 'block';
-                setTimeout(() => { document.getElementById('registerForm').reset(); document.getElementById('regSuccess').style.display = 'none'; }, 3000);
-            }
-            return false;
-        }
-
-        function validateLogin(event) {
-            event.preventDefault();
-            let isValid = true;
-            
-            const email = document.getElementById('loginEmail').value.trim();
-            const pass = document.getElementById('loginPassword').value;
-            
-            // Email validation
-            if(email === "") {
-                document.getElementById('loginEmailError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('loginEmailError').style.display = 'none';
-            }
-
-            // Password validation
-            if(pass === "") {
-                document.getElementById('loginPasswordError').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('loginPasswordError').style.display = 'none';
-            }
-
-            if(isValid) {
-                document.getElementById('loginSuccess').style.display = 'block';
-                setTimeout(() => { document.getElementById('loginForm').reset(); document.getElementById('loginSuccess').style.display = 'none'; }, 3000);
-            }
-            return false;
-        }
-    </script>
 </body>
+
 </html>

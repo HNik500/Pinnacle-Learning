@@ -2,37 +2,37 @@
 <courses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="courses.xsd">
     <course id="c101">
         <title>Full-Stack Web Development</title>
-        <instructor>Jane Doe</instructor>
+        <instructor>Hazari Nikhil</instructor>
         <price currency="USD">89.99</price>
         <rating>4.8</rating>
-        <duration>42 Hours</duration>
+        <duration>52 Hours</duration>
         <description>Become a full-stack web developer with just one course.</description>
     </course>
     
     <course id="c102">
         <title>Mastering UI/UX Design</title>
-        <instructor>Alan Smith</instructor>
+        <instructor>Oden Kauzuki</instructor>
         <price currency="USD">79.99</price>
         <rating>4.9</rating>
-        <duration>35 Hours</duration>
+        <duration>37 Hours</duration>
         <description>Learn to design intuitive interfaces and user experiences.</description>
     </course>
 
     <course id="c103">
         <title>Data Science with Python</title>
-        <instructor>Dr. Emily Chen</instructor>
+        <instructor>Raul Prakash</instructor>
         <price currency="USD">99.99</price>
         <rating>4.7</rating>
-        <duration>50 Hours</duration>
+        <duration>51 Hours</duration>
         <description>Master data analysis, visualization, and machine learning.</description>
     </course>
 
     <course id="c104">
         <title>Digital Marketing Analytics</title>
-        <instructor>Michael Johnson</instructor>
+        <instructor>Michael Scott</instructor>
         <price currency="USD">59.99</price>
         <rating>4.6</rating>
-        <duration>20 Hours</duration>
+        <duration>24 Hours</duration>
         <description>Drive business growth through digital channels and analytics.</description>
     </course>
 </courses>

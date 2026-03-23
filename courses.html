@@ -16,69 +16,86 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="register.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Login / Register</a>
+            <li><a href="register.html" class="btn btn-primary px-5-py-2">Login / Register</a>
             </li>
         </ul>
     </nav>
 
     <main class="container">
-        <div style="margin-bottom: 3rem;">
+        <div class="courses-header">
             <h1>Explore Our Courses</h1>
             <p>Discover courses in business, technology, design, and more to advance your career.</p>
         </div>
 
-        <!-- Course List using Grid System -->
         <div class="grid-system">
-            <!-- Course Card 1 -->
+
             <div class="card">
                 <img src="./res/fs.png" alt="Web Development" class="card-img">
                 <h3 class="course-title">Full-Stack Web Development</h3>
-                <p class="instructor">By Jane Doe, Sr. Engineer</p>
+                <p class="instructor">By Hazari Nikhil</p>
                 <div class="card-meta">
                     <span class="price">$89.99</span>
                     <span class="rating">★ 4.8 (1.2k)</span>
                 </div>
-                <a href="course_details.html" class="btn btn-outline"
-                    style="text-align: center; margin-top: 1.5rem; display: block;">View Details</a>
+                <div class="course-details">
+                    <p class="mb-0"><strong>Instructor:</strong> Hazari Nikhil</p>
+                    <p class="mb-0"><strong>Duration:</strong> 52 Hours</p>
+                    <p class="course-description">Become a full-stack web
+                        developer with just one course.</p>
+                    <button class="btn btn-primary w-100" onclick="alert('Proceeding to checkout!')">Enroll Now</button>
+                </div>
             </div>
 
-            <!-- Course Card 2 -->
             <div class="card">
                 <img src="./res/1727164350740.png" alt="UI UX Design" class="card-img">
                 <h3 class="course-title">Mastering UI/UX Design</h3>
-                <p class="instructor">By Alan Smith, Lead Designer</p>
+                <p class="instructor">By Oden Kauzuki</p>
                 <div class="card-meta">
                     <span class="price">$79.99</span>
                     <span class="rating">★ 4.9 (850)</span>
                 </div>
-                <a href="course_details_uiux.html" class="btn btn-outline"
-                    style="text-align: center; margin-top: 1.5rem; display: block;">View Details</a>
+                <div class="course-details">
+                    <p class="mb-0"><strong>Instructor:</strong> Oden Kauzuki</p>
+                    <p class="mb-0"><strong>Duration:</strong> 37 Hours</p>
+                    <p class="course-description">Learn to design intuitive
+                        interfaces and user experiences.</p>
+                    <button class="btn btn-primary w-100" onclick="alert('Proceeding to checkout!')">Enroll Now</button>
+                </div>
             </div>
 
-            <!-- Course Card 3 -->
+
             <div class="card">
                 <img src="res/Python_for_Data_Science.png" alt="Data Science" class="card-img">
                 <h3 class="course-title">Data Science with Python</h3>
-                <p class="instructor">By Dr. Emily Chen</p>
+                <p class="instructor">By Raul Prakash</p>
                 <div class="card-meta">
                     <span class="price">$99.99</span>
                     <span class="rating">★ 4.7 (2.4k)</span>
                 </div>
-                <a href="course_details_data.html" class="btn btn-outline"
-                    style="text-align: center; margin-top: 1.5rem; display: block;">View Details</a>
+                <div class="course-details">
+                    <p class="mb-0"><strong>Instructor:</strong> Raul Prakash</p>
+                    <p class="mb-0"><strong>Duration:</strong> 51 Hours</p>
+                    <p class="course-description">Master data analysis,
+                        visualization, and machine learning.</p>
+                    <button class="btn btn-primary w-100" onclick="alert('Proceeding to checkout!')">Enroll Now</button>
+                </div>
             </div>
 
-            <!-- Course Card 4 -->
             <div class="card">
                 <img src="./res/What-are-Digital-Marketing-Analytics.webp" alt="Digital Marketing" class="card-img">
                 <h3 class="course-title">Digital Marketing Analytics</h3>
-                <p class="instructor">By Michael Johnson</p>
+                <p class="instructor">By Michael Scott</p>
                 <div class="card-meta">
                     <span class="price">$59.99</span>
                     <span class="rating">★ 4.6 (920)</span>
                 </div>
-                <a href="course_details_digital.html" class="btn btn-outline"
-                    style="text-align: center; margin-top: 1.5rem; display: block;">View Details</a>
+                <div class="course-details">
+                    <p class="mb-0"><strong>Instructor:</strong> Michael Scott</p>
+                    <p class="mb-0"><strong>Duration:</strong> 24 Hours</p>
+                    <p class="course-description">Drive business growth
+                        through digital channels and analytics.</p>
+                    <button class="btn btn-primary w-100" onclick="alert('Proceeding to checkout!')">Enroll Now</button>
+                </div>
             </div>
         </div>
     </main>
@@ -86,6 +103,7 @@
     <footer>
         <p>&copy; 2026 Pinnacle Learning. All rights reserved.</p>
     </footer>
+
 </body>
 
 </html>
