@@ -253,7 +253,7 @@ footer {
 }
 
 /* Helper & Humanized Classes for index.html */
-.nav-btn {
+.nav-links .btn {
     padding: 0.5rem 1.25rem !important;
 }
 
@@ -264,28 +264,23 @@ footer {
     margin-top: 2rem;
 }
 
-.btn-outline-light {
+.hero .btn-outline {
     color: white;
     border-color: white;
 }
 
-.btn-outline-light:hover {
+.hero .btn-outline:hover {
     background: white;
     color: #000000;
 }
 
-.text-center {
+.features-section {
     text-align: center;
 }
 
-.max-w-800 {
+.features-intro {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mb-3rem {
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
 }
 
 .grid-3-col {
