@@ -28,13 +28,13 @@
                 <form id="registerForm">
                     <div class="form-group">
                         <label for="regName">Full Name</label>
-                        <input type="text" id="regName" class="form-control" placeholder="John Doe">
+                        <input type="text" id="regName" class="form-control" placeholder="Vikram Singh">
                         <span id="nameError" class="error-message">Please enter your full name.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="regEmail">Email Address</label>
-                        <input type="email" id="regEmail" class="form-control" placeholder="john@example.com">
+                        <input type="email" id="regEmail" class="form-control" placeholder="Vikram@example.com">
                         <span id="emailError" class="error-message">Please enter a valid email address.</span>
                     </div>
 
@@ -85,6 +85,90 @@
     <footer>
         <p>&copy; 2026 Pinnacle Learning. All rights reserved.</p>
     </footer>
+    <script>
+
+        const registerForm = document.getElementById('registerForm');
+        registerForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+
+            if (name.trim() === "") {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+
+
+            if (email.trim() === "" || !email.includes("@")) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+
+            if (password.length < 6) {
+                document.getElementById('passwordError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').style.display = 'none';
+            }
+
+            // Validate Confirm Password
+            if (confirmPassword !== password || confirmPassword === "") {
+                document.getElementById('confirmError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('confirmError').style.display = 'none';
+            }
+
+            // If all fields are valid, show success message
+            if (isValid) {
+                document.getElementById('regSuccess').style.display = 'block';
+            }
+        });
+
+        // Login Form Validation
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent page reload
+            let isValid = true;
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Validate Email
+            if (email.trim() === "" || !email.includes("@")) {
+                document.getElementById('loginEmailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('loginEmailError').style.display = 'none';
+            }
+
+            // Validate Password
+            if (password === "") {
+                document.getElementById('loginPasswordError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('loginPasswordError').style.display = 'none';
+            }
+
+            // If all fields are valid, show success message and redirect
+            if (isValid) {
+                document.getElementById('loginSuccess').style.display = 'block';
+                setTimeout(function () {
+                    window.location.href = 'index.html'; // Redirect to home
+                }, 1500);
+            }
+        });
+    </script>
 </body>
 
 </html>
