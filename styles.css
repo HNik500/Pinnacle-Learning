@@ -113,8 +113,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-        url('https://images.unsplash.com/photo-1516321497487-e288fb19713f') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
     color: white;
     padding: 0 2rem;
 }
@@ -154,14 +153,14 @@ main {
 }
 
 .btn-outline {
-    background: transparent;
-    color: #000000;
-    border: 2px solid #000000;
+    background: #000000;
+    color: white;
+
 }
 
 .btn-outline:hover {
-    background: #000000;
-    color: white;
+    transform: translateY(-2px);
+    background: #333333;
 }
 
 .grid-system {
@@ -264,15 +263,6 @@ footer {
     margin-top: 2rem;
 }
 
-.hero .btn-outline {
-    color: white;
-    border-color: white;
-}
-
-.hero .btn-outline:hover {
-    background: white;
-    color: #000000;
-}
 
 .features-section {
     text-align: center;

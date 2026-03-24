@@ -3,7 +3,7 @@
     <course id="c101">
         <title>Full-Stack Web Development</title>
         <instructor>Hazari Nikhil</instructor>
-        <price currency="USD">89.99</price>
+        <price currency="INR">7499</price>
         <rating>4.8</rating>
         <duration>52 Hours</duration>
         <description>Become a full-stack web developer with just one course.</description>
@@ -12,7 +12,7 @@
     <course id="c102">
         <title>Mastering UI/UX Design</title>
         <instructor>Oden Kauzuki</instructor>
-        <price currency="USD">79.99</price>
+        <price currency="INR">6499</price>
         <rating>4.9</rating>
         <duration>37 Hours</duration>
         <description>Learn to design intuitive interfaces and user experiences.</description>
@@ -21,7 +21,7 @@
     <course id="c103">
         <title>Data Science with Python</title>
         <instructor>Raul Prakash</instructor>
-        <price currency="USD">99.99</price>
+        <price currency="INR">8499</price>
         <rating>4.7</rating>
         <duration>51 Hours</duration>
         <description>Master data analysis, visualization, and machine learning.</description>
@@ -30,7 +30,7 @@
     <course id="c104">
         <title>Digital Marketing Analytics</title>
         <instructor>Michael Scott</instructor>
-        <price currency="USD">59.99</price>
+        <price currency="INR">4999</price>
         <rating>4.6</rating>
         <duration>24 Hours</duration>
         <description>Drive business growth through digital channels and analytics.</description>
